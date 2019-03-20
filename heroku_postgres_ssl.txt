@@ -1,0 +1,1 @@
+ssl=true;sslfactory=org.postgresql.ssl.NonValidatingFactory;
