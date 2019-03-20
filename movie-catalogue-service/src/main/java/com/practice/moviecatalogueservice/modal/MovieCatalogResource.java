@@ -15,13 +15,13 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 @RequestMapping("/catalog")
 public class MovieCatalogResource {
-    @Autowired
-    public RestTemplate restTemplate;
+//    @Autowired
+//    public RestTemplate restTemplate;
 
     @GetMapping("/{userId}")
     public ResponseEntity<List<CatalogItems>> getCatalog(@PathVariable("userId") String userId) {
         List<Rating> ratings = Arrays.asList(new Rating("1234", 3), new Rating("4569", 2));
-        Movie movie = restTemplate.getForObject("localhost:8083/movies/1234", Movie.class);
+//        Movie movie = restTemplate.getForObject("localhost:8083/movies/1234", Movie.class);
         return ResponseEntity
                 .ok(Collections.singletonList(new CatalogItems("Transformer", "movie about alien robots", 3)));
     }
